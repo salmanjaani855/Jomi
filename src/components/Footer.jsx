@@ -5,7 +5,7 @@ import net from '../assets/net.png'
 import facebook from '../assets/facebook.svg'
 import twitter from '../assets/twitter.svg'
 import maps from '../assets/maps.svg'
-
+import { Link } from 'react-router-dom'
 
 
 export default function Footer() {
@@ -59,11 +59,11 @@ export default function Footer() {
                 <div className="flex flex-col gap-3">
                   <b className="text-lg md:text-xl lg:text-2xl">Newsletter</b>
                   <div className="flex flex-col gap-1 text-gray-400 text-sm">
-                    <Link to='/pricing'><div>About JOMI</div></Link>
-                    <Link><div>Article Index</div></Link>
-                    <Link><div>Publish</div></Link>
-                    <Link><div>Editorial Board</div></Link>
-                    <Link><div>FAQ</div></Link>
+                    <Link to='/about'><div>About JOMI</div></Link>
+                    <Link to='article'><div>Article Index</div></Link>
+                    <Link to='/pricing'><div>Publish</div></Link>
+                    <Link to='editorialBoard'><div>Editorial Board</div></Link>
+                    <Link to='/form'><div>FAQ</div></Link>
                   </div>
                 </div>
 
@@ -71,11 +71,12 @@ export default function Footer() {
                 <div className="flex flex-col gap-3">
                   <b className="text-lg md:text-xl lg:text-2xl">Newsletter</b>
                   <div className="flex flex-col gap-1 text-gray-400 text-sm">
-                    <div>JOMI Blog</div>
-                    <div>Newsletter</div>
-                    <div>Careers</div>
-                    <div>Partners/Sponsors</div>
-                    <div>Contact Us</div>
+              
+                      <Link to='/about'><div>JOMI Blog</div></Link>
+                    <Link to='article'><div>Newsletter</div></Link>
+                    <Link to='/pricing'><div>Careers</div></Link>
+                    <Link to='subscribingInstitutions'><div>Partners/Sponsors</div></Link>
+                    <Link to='/form'><div>Contact Us</div></Link>
                   </div>
                 </div>
 
