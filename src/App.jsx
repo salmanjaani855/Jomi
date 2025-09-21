@@ -33,7 +33,7 @@ export default function App() {
         <Route path="/editorialBoard" element={<EditorialBoard />} />
         <Route path="/subscribingInstitutions" element={<SubscribingInstitutions />} />
         <Route path="/pricing" element={<Pricing />} />
-        <Route path="/page2" element={<Page />} />
+        <Route path="/page" element={<Page />} />
         <Route path="/form" element={<Form />} />
       </Routes>
       <Footer />

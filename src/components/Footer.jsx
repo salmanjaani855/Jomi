@@ -5,6 +5,7 @@ import net from '../assets/net.png'
 import facebook from '../assets/facebook.svg'
 import twitter from '../assets/twitter.svg'
 import maps from '../assets/maps.svg'
+import { Link } from 'lucide-react'
 
 
 
@@ -59,11 +60,11 @@ export default function Footer() {
                 <div className="flex flex-col gap-3">
                   <b className="text-lg md:text-xl lg:text-2xl">Newsletter</b>
                   <div className="flex flex-col gap-1 text-gray-400 text-sm">
-                    <div>About JOMI</div>
-                    <div>Article Index</div>
-                    <div>Publish</div>
-                    <div>Editorial Board</div>
-                    <div>FAQ</div>
+                    <Link to='/about'>About JOMI</Link>
+                    <Link to='/article'>Article Index</Link>
+                    <Link to='/form'>Publish</Link>
+                    <Link to='/editorialBoard'>Editorial Board</Link>
+                    <Link to='/pricing'>FAQ</Link>
                   </div>
                 </div>
 
@@ -71,11 +72,11 @@ export default function Footer() {
                 <div className="flex flex-col gap-3">
                   <b className="text-lg md:text-xl lg:text-2xl">Newsletter</b>
                   <div className="flex flex-col gap-1 text-gray-400 text-sm">
-                    <div>JOMI Blog</div>
-                    <div>Newsletter</div>
-                    <div>Careers</div>
-                    <div>Partners/Sponsors</div>
-                    <div>Contact Us</div>
+                    <Link to='/about'>JOMI Blog</Link>
+                    <Link to='/article'>Newsletter</Link>
+                    <Link to='/editorialBoard'>Careers</Link>
+                    <Link to='/page'>Partners/Sponsors</Link>
+                    <Link to='/form'>Contact Us</Link>
                   </div>
                 </div>
 
@@ -83,9 +84,9 @@ export default function Footer() {
                 <div className="flex flex-col gap-3">
                   <b className="text-lg md:text-xl lg:text-2xl">Connect with us</b>
                   <div className="flex flex-col gap-1 text-gray-400 text-sm">
-                    <div className="flex items-center gap-2"><img className="w-4 h-4" alt="Facebook" src={facebook} />Facebook</div>
-                    <div className="flex items-center gap-2"><img className="w-4 h-4" alt="Twitter" src={twitter} />Twitter</div>
-                    <div className="flex items-center gap-2"><img className="w-4 h-4" alt="Maps" src={maps} />Maps</div>
+                    <a href='https://www.facebook.com/JoMIJournal/' className="flex items-center gap-2"><img className="w-4 h-4" alt="Facebook" src={facebook} />Facebook</a>
+                    <a href='https://x.com/JoMIJournal' className="flex items-center gap-2"><img className="w-4 h-4" alt="Twitter" src={twitter} />Twitter</a>
+                    <a href='https://www.youtube.com/channel/UC4tzwuDDsZsfRswMRAXjVSg' className="flex items-center gap-2"><img className="w-4 h-4" alt="Maps" src={maps} />Maps</a >
                   </div>
                 </div>
 
