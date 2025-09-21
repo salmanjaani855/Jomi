@@ -5,7 +5,6 @@ import net from '../assets/net.png'
 import facebook from '../assets/facebook.svg'
 import twitter from '../assets/twitter.svg'
 import maps from '../assets/maps.svg'
-import { Link } from 'lucide-react'
 
 
 
@@ -60,11 +59,11 @@ export default function Footer() {
                 <div className="flex flex-col gap-3">
                   <b className="text-lg md:text-xl lg:text-2xl">Newsletter</b>
                   <div className="flex flex-col gap-1 text-gray-400 text-sm">
-                    <Link to='/about'>About JOMI</Link>
-                    <Link to='/article'>Article Index</Link>
-                    <Link to='/form'>Publish</Link>
-                    <Link to='/editorialBoard'>Editorial Board</Link>
-                    <Link to='/pricing'>FAQ</Link>
+                    <Link to='/pricing'><div>About JOMI</div></Link>
+                    <Link><div>Article Index</div></Link>
+                    <Link><div>Publish</div></Link>
+                    <Link><div>Editorial Board</div></Link>
+                    <Link><div>FAQ</div></Link>
                   </div>
                 </div>
 
@@ -72,11 +71,11 @@ export default function Footer() {
                 <div className="flex flex-col gap-3">
                   <b className="text-lg md:text-xl lg:text-2xl">Newsletter</b>
                   <div className="flex flex-col gap-1 text-gray-400 text-sm">
-                    <Link to='/about'>JOMI Blog</Link>
-                    <Link to='/article'>Newsletter</Link>
-                    <Link to='/editorialBoard'>Careers</Link>
-                    <Link to='/page'>Partners/Sponsors</Link>
-                    <Link to='/form'>Contact Us</Link>
+                    <div>JOMI Blog</div>
+                    <div>Newsletter</div>
+                    <div>Careers</div>
+                    <div>Partners/Sponsors</div>
+                    <div>Contact Us</div>
                   </div>
                 </div>
 
