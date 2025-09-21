@@ -50,9 +50,9 @@ export default function App() {
 
 <div className="hidden md:flex items-center gap-6 lg:gap-8 text-sm lg:text-base font-medium flex-wrap text-[#a1a1aa]">
   {[
-    { title: "Article", items: [{ name: "About Articles", path: "/article" }, { name: "Popular Articles", path: "/page2" },] },
+    { title: "Article", items: [{ name: "About Articles", path: "/article" }, { name: "Popular Articles", path: "/page" },] },
     { title: "About", items: [{ name: "About Info", path: "/about" }, { name: "EditorialBoard", path: "/editorialBoard" }, ] },
-    { title: "Publish", items: [{ name: "Pricing", path: "/pricing" }, { name: "Guidelines", path: "/page2" },] },
+    { title: "Publish", items: [{ name: "Pricing", path: "/pricing" }, { name: "Guidelines", path: "/page" },] },
     { title: "Subscribe", items: [{ name: "Newsletter", path: "/about" }, { name: "Premium Access", path: "/pricing" }] },
     { title: "More", items: [{ name: "EditorialBoard", path: "/subscribingInstitutions" }, { name: "Book Appointment", path: "/form" }] },
   ].map((navItem, idx) => (
