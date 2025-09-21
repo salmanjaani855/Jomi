@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from './components/Navbar'
 import Homepage from './Homepage'
 import Footer from './components/Footer'
-import Page2 from './page2'
+import Page from './Page'
 import About from './About'
 import EditorialBoard from './EditorialBoard'
 import SubscribingInstitutions from './SubscribingInstitutions'
@@ -33,7 +33,7 @@ export default function App() {
         <Route path="/editorialBoard" element={<EditorialBoard />} />
         <Route path="/subscribingInstitutions" element={<SubscribingInstitutions />} />
         <Route path="/pricing" element={<Pricing />} />
-        <Route path="/page2" element={<Page2 />} />
+        <Route path="/page2" element={<Page />} />
         <Route path="/form" element={<Form />} />
       </Routes>
       <Footer />

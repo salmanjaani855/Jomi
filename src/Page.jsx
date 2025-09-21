@@ -9,7 +9,7 @@ import logo5 from './assets/logo5.png'
 import logo6 from './assets/logo6.png'
 import { Link } from 'react-router-dom'
 
-export default function page2() {
+export default function page() {
   return (
     <div>
 
