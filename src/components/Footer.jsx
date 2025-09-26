@@ -55,30 +55,29 @@ export default function Footer() {
                   </div>
                 </div>
 
-                {/* Column 2 */}
-                <div className="flex flex-col gap-3">
-                  <b className="text-lg md:text-xl lg:text-2xl">Newsletter</b>
-                  <div className="flex flex-col gap-1 text-gray-400 text-sm">
-                    <Link to='/about'><div>About JOMI</div></Link>
-                    <Link to='article'><div>Article Index</div></Link>
-                    <Link to='/pricing'><div>Publish</div></Link>
-                    <Link to='editorialBoard'><div>Editorial Board</div></Link>
-                    <Link to='/form'><div>FAQ</div></Link>
-                  </div>
-                </div>
+ {/* Column 2 */}
+<div className="flex flex-col gap-3">
+  <b className="text-lg md:text-xl lg:text-2xl">Newsletter</b>
+  <div className="flex flex-col gap-1 text-gray-400 text-sm">
+    <Link to='/about' className="hover:text-white hover:underline transition-colors">About JOMI</Link>
+    <Link to='/article' className="hover:text-white hover:underline transition-colors">Article Index</Link>
+    <Link to='/pricing' className="hover:text-white hover:underline transition-colors">Publish</Link>
+    <Link to='/editorialBoard' className="hover:text-white hover:underline transition-colors">Editorial Board</Link>
+    <Link to='/form' className="hover:text-white hover:underline transition-colors">FAQ</Link>
+  </div>
+</div>
 
-                {/* Column 3 */}
-                <div className="flex flex-col gap-3">
-                  <b className="text-lg md:text-xl lg:text-2xl">Newsletter</b>
-                  <div className="flex flex-col gap-1 text-gray-400 text-sm">
-              
-                      <Link to='/about'><div>JOMI Blog</div></Link>
-                    <Link to='article'><div>Newsletter</div></Link>
-                    <Link to='/pricing'><div>Careers</div></Link>
-                    <Link to='subscribingInstitutions'><div>Partners/Sponsors</div></Link>
-                    <Link to='/form'><div>Contact Us</div></Link>
-                  </div>
-                </div>
+{/* Column 3 */}
+<div className="flex flex-col gap-3">
+  <b className="text-lg md:text-xl lg:text-2xl">Newsletter</b>
+  <div className="flex flex-col gap-1 text-gray-400 text-sm">
+    <Link to='/about' className="hover:text-white hover:underline transition-colors">JOMI Blog</Link>
+    <Link to='/article' className="hover:text-white hover:underline transition-colors">Newsletter</Link>
+    <Link to='/pricing' className="hover:text-white hover:underline transition-colors">Careers</Link>
+    <Link to='/subscribingInstitutions' className="hover:text-white hover:underline transition-colors">Partners/Sponsors</Link>
+    <Link to='/form' className="hover:text-white hover:underline transition-colors">Contact Us</Link>
+  </div>
+</div>
 
                 {/* Column 4 */}
                 <div className="flex flex-col gap-3">

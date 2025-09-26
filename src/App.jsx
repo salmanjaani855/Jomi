@@ -15,13 +15,14 @@ import LocomotiveScroll from 'locomotive-scroll';
 const locomotiveScroll = new LocomotiveScroll();
 
 
-
+import ScrollProgress from "./ScrollProgress";
 
 
 
 export default function App() {
   return (
     <div>
+      <ScrollProgress />  {/* Top pe progress bar */}
       <Navbar />
 
 

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState} from "react";
 import { Menu, X, Search } from "lucide-react";
 // import { ChevronDown } from "lucide-react";
 import logo from '../assets/logo.svg'
@@ -10,8 +10,10 @@ export default function App() {
 
 
 
+
   return (
     <>
+    <div>
       <nav className="w-full bg-[#27272a] text-darkgray font-manrope shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-4 flex items-center justify-between">
           <Link to='/'>
@@ -123,9 +125,27 @@ export default function App() {
             </div>
 
             {/* Buttons */}
-            <Link to='/form' className="bg-gradient-to-r from-indigo-600 to-blue-400 text-white px-4 py-2">
-              Sign up
-            </Link>
+           <Link to='/form' className="relative bg-gradient-to-r from-indigo-600 to-blue-400 text-white px-4 py-2 rounded overflow-hidden group inline-block">
+  {/* Shine Animation */}
+  <span className="absolute top-0 left-[-75%] w-1/2 h-full bg-white opacity-20 transform -skew-x-12 animate-shine pointer-events-none"></span>
+
+  {/* Button Text */}
+  <span className="relative z-10 font-medium">
+    Sign up
+  </span>
+
+  {/* Keyframes */}
+  <style jsx>{`
+    @keyframes shine {
+      0% { left: -75%; }
+      100% { left: 125%; }
+    }
+    .animate-shine {
+      animation: shine 2.5s linear infinite;
+    }
+  `}</style>
+</Link>
+
             <Link to='/form' className="border border-gray-400 text-white px-4 py-2 ">
               Log in
             </Link>
@@ -139,39 +159,86 @@ export default function App() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="md:hidden bg-white shadow-md px-4 py-4 space-y-4">
-            <a href="#" className="block hover:text-indigo-600">Articles</a>
-            <a href="#" className="block hover:text-indigo-600">About</a>
-            <a href="#" className="block hover:text-indigo-600">Publish</a>
-            <a href="#" className="block hover:text-indigo-600">Subscribe</a>
+    {/* Mobile Menu */}
+{isOpen && (
+  <div className="md:hidden bg-[#000] text-white shadow-md px-4 py-4 space-y-4">
+    {/* Nav Items with Dropdown */}
+    {[
+      { title: "Article", items: [{ name: "About Articles", path: "/article" }, { name: "Popular Articles", path: "/page" }] },
+      { title: "About", items: [{ name: "About Info", path: "/about" }, { name: "EditorialBoard", path: "/editorialBoard" }] },
+      { title: "Publish", items: [{ name: "Pricing", path: "/pricing" }, { name: "Guidelines", path: "/page" }] },
+      { title: "Subscribe", items: [{ name: "Newsletter", path: "/about" }, { name: "Premium Access", path: "/pricing" }] },
+      { title: "More", items: [{ name: "EditorialBoard", path: "/subscribingInstitutions" }, { name: "Book Appointment", path: "/form" }] },
+    ].map((navItem, idx) => (
+      <div key={idx} className="border-b pb-2">
+        <p className="font-medium text-gray-700 mb-2">{navItem.title}</p>
+        <div className="flex flex-col gap-1 pl-3">
+          {navItem.items.map((item, i) => (
+            <Link
+              key={i}
+              to={item.path}
+              className="block px-2 py-1 rounded hover:bg-indigo-600 hover:text-white transition-colors duration-200 text-sm"
+            >
+              {item.name}
+            </Link>
+          ))}
+        </div>
+      </div>
+    ))}
+
+    {/* Search + Buttons */}
+    <div className="flex flex-col gap-3 pt-4">
+      {/* Search Box */}
+      <div className="flex items-center gap-2 bg-darkslategray text-white px-3 py-2 rounded-md">
+        <Search size={16} />
+        <input
+          type="text"
+          placeholder="Search Articles"
+          className="bg-transparent focus:outline-none text-sm w-full"
+        />
+      </div>
+
+      {/* Buttons */}
+                 {/* Buttons */}
+           <Link to='/form' className="relative bg-gradient-to-r from-indigo-600 to-blue-400 text-white px-4 py-2 rounded overflow-hidden group inline-block">
+  {/* Shine Animation */}
+  <span className="absolute top-0 left-[-75%] w-1/2 h-full bg-white opacity-20 transform -skew-x-12 animate-shine pointer-events-none"></span>
+
+  {/* Button Text */}
+  <span className="relative z-10 font-medium">
+    Sign up
+  </span>
+
+  {/* Keyframes */}
+  <style jsx>{`
+    @keyframes shine {
+      0% { left: -75%; }
+      100% { left: 125%; }
+    }
+    .animate-shine {
+      animation: shine 2.5s linear infinite;
+    }
+  `}</style>
+</Link>
+
+            <Link to='/form' className="border border-gray-400 text-white px-4 py-2 ">
+              Log in
+            </Link>
+    </div>
+  </div>
+)}
 
 
 
 
-            <div className="flex flex-col gap-3">
-              <div className="flex items-center gap-2 bg-darkslategray text-white px-3 py-2 rounded-md">
-                <Search size={16} />
-                <input
-                  type="text"
-                  placeholder="Search Articles"
-                  className="bg-transparent focus:outline-none text-sm"
-                />
-              </div>
-              <button className="bg-gradient-to-r from-indigo-600 to-blue-400 text-white px-4 py-2 rounded-md">
-                Sign up
-              </button>
-              <button className="border border-gray-400 px-4 py-2 rounded-md">
-                Log in
-              </button>
-            </div>
-          </div>
+
+
+          
 
 
 
 
-        )}
+        
       </nav>
 
 
@@ -179,7 +246,7 @@ export default function App() {
 
 
 
-
+</div>
 
 
     </>
