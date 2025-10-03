@@ -170,21 +170,29 @@ export default function Homepage() {
 
 <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
   {/* Wrapper for scrolling with hover pause */}
-  <div className="relative overflow-hidden group">
-    <div className="flex gap-6 animate-marquee group-hover:pause">
+  <div className="relative overflow-hidden group/marquee">
+    <div className="flex gap-6 animate-marquee group-hover/marquee:pause">
       {[...Array(2)].map((_, idx) => (
         <React.Fragment key={idx}>
-          {/* ==== Card 1 ==== */}
+
+{/* ==== Card 1 ==== */}
 <div className="relative w-80 sm:w-96 flex-shrink-0 rounded-lg bg-[#000] 
   border border-[#3f3f46] overflow-hidden flex flex-col p-4 text-left 
   text-xs sm:text-sm md:text-base text-gray-200 font-manrope 
-  transform transition duration-300 hover:scale-105 hover:bg-[#1f1f23]">
+  transition duration-300 hover:bg-[#1f1f23]">
 
-  {/* Card Content */}
-  <a href='https://youtu.be/Ubm9ysAJclY?si=r6rACMMUNlee_yK2' 
-     target="_blank" rel="noopener noreferrer" 
-     className="w-full h-40 sm:h-48 md:h-56 lg:h-64 relative z-10">
-    <img className="w-full h-full object-cover rounded-md" alt="" src={Rectangle1} />
+  <a href="https://youtu.be/Ubm9ysAJclY?si=r6rACMMUNlee_yK2" 
+     target="_blank" rel="noopener noreferrer"
+     className="w-full h-40 sm:h-48 md:h-56 lg:h-64 relative z-10 overflow-hidden rounded-md group/card">
+
+    {/* Image */}
+    <img 
+      className="w-full h-full object-cover rounded-md transition-transform duration-300 group-hover/card:scale-110" 
+      alt="" 
+      src={Rectangle1} 
+    />
+
+    {/* Play button (Always visible) */}
     <div className="absolute inset-0 flex items-center justify-center">
       <div className="w-12 h-12 sm:w-14 sm:h-14 bg-black/50 rounded-full flex items-center justify-center">
         <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -212,23 +220,31 @@ export default function Homepage() {
       <img className="w-20 sm:w-24 object-cover" alt="" src={card1} />
     </div>
   </div>
-
-  {/* Removed animation, simple border now */}
 </div>
 
 
 {/* ==== Card 2 ==== */}
-<div className="relative w-80 sm:w-96 flex-shrink-0 rounded-lg bg-[#000] border border-[#3f3f46] 
-  overflow-hidden flex flex-col p-4 text-left text-xs sm:text-sm md:text-base text-gray-200 font-manrope 
-  transform transition duration-300 hover:scale-105 hover:bg-[#1f1f23]">
+<div className="relative w-80 sm:w-96 flex-shrink-0 rounded-lg bg-[#000] 
+  border border-[#3f3f46] overflow-hidden flex flex-col p-4 text-left 
+  text-xs sm:text-sm md:text-base text-gray-200 font-manrope 
+  transition duration-300 hover:bg-[#1f1f23]">
 
-  {/* Sliding Subtle Border Effect */}
   <span className="absolute inset-0 rounded-lg border border-[#3f3f46] pointer-events-none overflow-hidden">
     <span className="absolute top-0 left-[-50%] w-1/2 h-full bg-white/10 blur-md animate-slide-border"></span>
   </span>
 
-  <a href='https://youtu.be/xQy3xRb5jKw?si=YfcJTdTo3KBsRUp2' target="_blank" rel="noopener noreferrer" className="w-full h-40 sm:h-48 md:h-56 lg:h-64 relative z-10">
-    <img className="w-full h-full object-cover rounded-md" alt="" src={Reactangle3} />
+  <a href="https://youtu.be/xQy3xRb5jKw?si=YfcJTdTo3KBsRUp2" 
+     target="_blank" rel="noopener noreferrer"
+     className="w-full h-40 sm:h-48 md:h-56 lg:h-64 relative z-10 overflow-hidden rounded-md group/card">
+
+    {/* Image */}
+    <img 
+      className="w-full h-full object-cover rounded-md transition-transform duration-300 group-hover/card:scale-110" 
+      alt="" 
+      src={Reactangle3} 
+    />
+
+    {/* Play Button (Always visible) */}
     <div className="absolute inset-0 flex items-center justify-center">
       <div className="w-12 h-12 sm:w-14 sm:h-14 bg-black/50 rounded-full flex items-center justify-center">
         <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -253,7 +269,6 @@ export default function Homepage() {
     </div>
   </div>
 
-  {/* Keyframes for sliding subtle border */}
   <style jsx>{`
     @keyframes slide-border {
       0% { left: -50%; }
@@ -267,17 +282,27 @@ export default function Homepage() {
 
 
 {/* ==== Card 3 ==== */}
-<div className="relative w-80 sm:w-96 flex-shrink-0 rounded-lg bg-[#000] border border-[#3f3f46] 
-  overflow-hidden flex flex-col p-4 text-left text-xs sm:text-sm md:text-base text-gray-200 font-manrope 
-  transform transition duration-300 hover:scale-105 hover:bg-[#1f1f23]">
+<div className="relative w-80 sm:w-96 flex-shrink-0 rounded-lg bg-[#000] 
+  border border-[#3f3f46] overflow-hidden flex flex-col p-4 text-left 
+  text-xs sm:text-sm md:text-base text-gray-200 font-manrope 
+  transition duration-300 hover:bg-[#1f1f23]">
 
-  {/* Subtle Sliding Border (lighter color) */}
   <span className="absolute inset-0 rounded-lg border border-[#52525b] pointer-events-none overflow-hidden">
     <span className="absolute top-0 left-[-50%] w-1/2 h-full bg-white/5 blur-md animate-slide-border-light"></span>
   </span>
 
-  <a href='https://youtu.be/GByApALC8sY?si=-ALJH5kPVvqTvayL' target="_blank" rel="noopener noreferrer" className="w-full h-40 sm:h-48 md:h-56 lg:h-64 relative z-10">
-    <img className="w-full h-full object-cover rounded-md" alt="" src={Rectangle2} />
+  <a href="https://youtu.be/GByApALC8sY?si=-ALJH5kPVvqTvayL" 
+     target="_blank" rel="noopener noreferrer"
+     className="w-full h-40 sm:h-48 md:h-56 lg:h-64 relative z-10 overflow-hidden rounded-md group/card">
+
+    {/* Image */}
+    <img 
+      className="w-full h-full object-cover rounded-md transition-transform duration-300 group-hover/card:scale-110" 
+      alt="" 
+      src={Rectangle2} 
+    />
+
+    {/* Play Button (Always visible) */}
     <div className="absolute inset-0 flex items-center justify-center">
       <div className="w-12 h-12 sm:w-14 sm:h-14 bg-black/50 rounded-full flex items-center justify-center">
         <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -305,7 +330,6 @@ export default function Homepage() {
     </div>
   </div>
 
-  {/* Keyframes for lighter border animation */}
   <style jsx>{`
     @keyframes slide-border-light {
       0% { left: -50%; }
@@ -318,71 +342,70 @@ export default function Homepage() {
 </div>
 
 
-          {/* ==== Card 4 ==== */}
-          <div className="w-80 sm:w-96 flex-shrink-0 rounded-lg bg-[#000] border border-[#3f3f46] 
-            overflow-hidden flex flex-col p-4 text-left text-xs sm:text-sm md:text-base text-gray-200 font-manrope 
-            transform transition duration-300 hover:scale-105 hover:bg-[#1f1f23]">
-            <a href='https://youtu.be/G43L9HfC7Fk?si=3Ub1gG4VRCNcgTTu' target="_blank" rel="noopener noreferrer" className="w-full h-40 sm:h-48 md:h-56 lg:h-64 relative">
-              <img className="w-full h-full object-cover rounded-md" alt="" src={Rectangle4} />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-black/50 rounded-full flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-              </div>
-            </a>
-            <div className="flex flex-col gap-4 mt-4 flex-1">
-              <div className="flex">
-                <div className="rounded-sm bg-[#fcd34d] px-2 py-1 text-[#18181b]">
-                  <b className="tracking-widest text-[0.65rem] sm:text-xs uppercase">Basic Skills for the OR</b>
-                </div>
-              </div>
-              <b className="text-sm sm:text-base md:text-lg text-gray-100 leading-snug line-clamp-3">
-                Opening Sterile Surgical Instrument Containers
-              </b>
-              <div className="flex items-center justify-between mt-auto">
-                <div className="flex -space-x-1">
-                  <img className="w-6 h-6 rounded-full object-cover" alt="" src={profile3} />
-                  <img className="w-6 h-6 rounded-full object-cover" alt="" src={profile4} />
-                </div>
-                <img className="w-20 sm:w-24 object-cover" alt="" src={rectangle5} />
-              </div>
-            </div>
-          </div>
+{/* ==== Card 4 ==== */}
+<div className="relative w-80 sm:w-96 flex-shrink-0 rounded-lg bg-[#000] 
+  border border-[#3f3f46] overflow-hidden flex flex-col p-4 text-left 
+  text-xs sm:text-sm md:text-base text-gray-200 font-manrope 
+  transition duration-300 hover:bg-[#1f1f23]">
+
+  <a href="https://youtu.be/G43L9HfC7Fk?si=3Ub1gG4VRCNcgTTu" 
+     target="_blank" rel="noopener noreferrer"
+     className="w-full h-40 sm:h-48 md:h-56 lg:h-64 relative overflow-hidden rounded-md group/card">
+
+    {/* Image */}
+    <img 
+      className="w-full h-full object-cover rounded-md transition-transform duration-300 group-hover/card:scale-110" 
+      alt="" 
+      src={Rectangle4} 
+    />
+
+    {/* Play Button (Always visible) */}
+    <div className="absolute inset-0 flex items-center justify-center">
+      <div className="w-12 h-12 sm:w-14 sm:h-14 bg-black/50 rounded-full flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M8 5v14l11-7z" />
+        </svg>
+      </div>
+    </div>
+  </a>
+
+  <div className="flex flex-col gap-4 mt-4 flex-1">
+    <div className="flex">
+      <div className="rounded-sm bg-[#fcd34d] px-2 py-1 text-[#18181b]">
+        <b className="tracking-widest text-[0.65rem] sm:text-xs uppercase">Basic Skills for the OR</b>
+      </div>
+    </div>
+    <b className="text-sm sm:text-base md:text-lg text-gray-100 leading-snug line-clamp-3">
+      Opening Sterile Surgical Instrument Containers
+    </b>
+    <div className="flex items-center justify-between mt-auto">
+      <div className="flex -space-x-1">
+        <img className="w-6 h-6 rounded-full object-cover" alt="" src={profile3} />
+        <img className="w-6 h-6 rounded-full object-cover" alt="" src={profile4} />
+      </div>
+      <img className="w-20 sm:w-24 object-cover" alt="" src={rectangle5} />
+    </div>
+  </div>
+</div>
+
         </React.Fragment>
       ))}
     </div>
   </div>
 
   {/* Button */}
-<Link to='/article'>
-  <div className="relative rounded bg-gradient-to-r from-indigo-600 to-sky-400 
-    w-fit px-6 py-3 mt-6 flex items-center justify-center 
-    text-sm sm:text-base text-white font-manrope cursor-pointer overflow-hidden group">
+  <Link to="/article">
+    <div className="relative rounded bg-gradient-to-r from-indigo-600 to-sky-400 
+      w-fit px-6 py-3 mt-6 flex items-center justify-center 
+      text-sm sm:text-base text-white font-manrope cursor-pointer overflow-hidden group/button">
 
-    {/* Animated Shine Effect */}
-    <span className="absolute top-0 left-[-75%] w-1/2 h-full bg-white opacity-20 
-      transform -skew-x-12 animate-shine pointer-events-none"></span>
+      <span className="absolute top-0 left-[-75%] w-1/2 h-full bg-white opacity-20 
+        transform -skew-x-12 animate-shine pointer-events-none"></span>
 
-    {/* Inner Button Text */}
-    <span className="relative z-10 font-medium">View Articles</span>
+      <span className="relative z-10 font-medium">View Articles</span>
+    </div>
+  </Link>
 
-    {/* Animation Keyframes */}
-    <style jsx>{`
-      @keyframes shine {
-        0% { left: -75%; }
-        100% { left: 125%; }
-      }
-      .animate-shine {
-        animation: shine 2.5s linear infinite;
-      }
-    `}</style>
-  </div>
-</Link>
-
-
-  {/* Tailwind Animation */}
   <style>
     {`
       @keyframes marquee {
@@ -392,12 +415,20 @@ export default function Homepage() {
       .animate-marquee {
         animation: marquee 10s linear infinite;
       }
-      .group-hover\\:pause:hover {
+      .group-hover\\/marquee\\:pause:hover {
         animation-play-state: paused;
+      }
+      @keyframes shine {
+        0% { left: -75%; }
+        100% { left: 125%; }
+      }
+      .animate-shine {
+        animation: shine 2.5s linear infinite;
       }
     `}
   </style>
 </div>
+
 
 
 
